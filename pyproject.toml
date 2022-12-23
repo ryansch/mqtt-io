@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mqtt-io"
-version = "2.2.6"
+version = "2.2.7"
 description = "Expose GPIO modules (Raspberry Pi, Beaglebone, PCF8754, PiFace2 etc.), digital sensors (LM75 etc.) and serial streams to an MQTT server for remote control and monitoring."
 readme = "README.md"
 authors = ["Ellis Percival <mqtt-io@failcode.co.uk>"]
@@ -8,23 +8,24 @@ license = "MIT"
 documentation = "https://flyte.github.io/mqtt-io/"
 
 [tool.poetry.dependencies]
-python = "^3.6.2"
+python = "^3.7"
 PyYAML = "^5.4"
 Cerberus = "^1.3.2"
 typing-extensions = "^3.7.4"
-dataclasses = { version = "^0.8", python = ">=3.6,<3.7" }
 backoff = "^1.10.0"
 confp = "^0.4.0"
-trio = "^0.18.0"
+trio = "^0.22.0"
 anyio-mqtt = "^0.3.2"
-trio-typing = "^0.5.0"
+trio-typing = "^0.7.0"
+
+# Maybe add https://github.com/python-trio/asyncgpio
 
 [tool.poetry.dev-dependencies]
 mock = { version = "^4.0.3", python = ">=3.6,<3.8" }
-pytest = "^6.2.2"
+pytest = "^7.2.0"
 tox = "^3.22.0"
 pylint = "^2.6.2"
-mypy = "^0.812"
+mypy = "^0.991"
 behave = "^1.2.6"
 coverage = "^5.4"
 md-toc = "^7.1.0"
@@ -35,7 +36,7 @@ Jinja2 = "^2.11.3"
 ast-to-xml="^0.2.3"
 GitPython = "^3.1.15"
 semver = "^2.13.0"
-pytest-trio = "^0.7.0"
+pytest-trio = "^0.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
